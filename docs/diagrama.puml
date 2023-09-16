@@ -1,26 +1,16 @@
 @startuml
 
 class Naveheroe 
-class naveenemiga1 
-class naveenemiga2
-class naveenemiga3
-class naveenemiga4
-class naveenemiga5
-class naveenemiga6
-class naveenemiga7
-class naveenemiga8
-class naveenemiga9
-class naveenemiga10
-class bicho1
-class bicho2
-class bicho3
-class bicho4
-class bicho5
-class bicho6
-class bicho7
-class bicho8
-class bicho9
-class bicho10
-
+class naveenemiga
+class bichos
+class dispara   
+class matar 
+class ganar 
+class perder 
+    Naveheroe --o dispara
+    dispara --o naveenemiga
+    dispara --o bichos
+    naveenemiga --o dispara
+    dispara --o Naveheroe
 
 @enduml
