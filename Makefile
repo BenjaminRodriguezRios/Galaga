@@ -1,5 +1,5 @@
-bin/ejecutable:	src/main.cpp	include/*.hpp
-	c++ src/main.cpp -o bin/ejecutable -I include -l curses
+bin/galaga 	:	src/galaga.cpp	include/*.hpp
+	c++ src/galaga.cpp -o bin/galaga -I include -l curses
 
-run	:	bin/ejecutable
-	./bin/ejecutable
+run	:	bin/galaga
+	./bin/galaga
