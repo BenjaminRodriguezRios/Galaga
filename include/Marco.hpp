@@ -12,6 +12,6 @@ public:
 
     void Dibujar()
     {
-        box(stdscr, '|', '#');
+        box(stdscr, '#', '#');
     }
 };

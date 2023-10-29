@@ -2,56 +2,46 @@
 #include <curses.h>
 #include <iostream>
 #include <unistd.h>
-#include <list>
-#include <Dibujo.hpp>
-#include <Actualizable.hpp>
-using namespace std;
 
 class Ventana
 {
 private:
     int x;
     int y;
+    bool ejecucion;
     int velocidad;
     int contador;
-    bool ejecutar;
 
 public:
     Ventana()
     {
         initscr();
         getmaxyx(stdscr, this->y, this->x);
-        this->ejecutar = false;
+        this->ejecucion = false;
         this->velocidad = 10;
         this->contador = 20;
         curs_set(FALSE);
-
         cbreak();
         timeout(100);
         noecho();
         keypad(stdscr, TRUE);
     }
 
-    void actualizar(list<Actualizable *> actualizables)
+    void Actualizar()
     {
-        for (auto &&actualizable : actualizables)
+        this->contador = this->contador - 1;
+        if (this->contador == 0)
         {
-            actualizable->Actualizar();
+            this->Cerrar();
         }
     }
-    void dibujar(list<Dibujo *> dibujos)
+    void Dibujar()
     {
-        clear();
-        for (auto &&dibujo : dibujos)
-        {
-            dibujo->Dibujar();
-        }
-        refresh();
-        usleep(41000);
+        box(stdscr, 'E', 'Z');
     }
-    void cerrar()
+    void Cerrar()
     {
-        this->ejecutar = false;
+        this->ejecucion = false;
     }
     ~Ventana()
     {

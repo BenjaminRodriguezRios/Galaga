@@ -7,7 +7,7 @@ class Naveh : public Dibujo, public Actualizable
 private:
     /* data */
 public:
-    Naveh(/* args */) : Dibujo("Naveh")
+    Naveh(/* args */) : Dibujo("naveh")
     {}
     ~Naveh() {}
     void Actualizar()

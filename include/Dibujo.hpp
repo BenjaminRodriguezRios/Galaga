@@ -30,13 +30,21 @@ public:
         this->x = x;
         this->y = y;
     }
-    void Avanzarx(int x)
+    void AvanzarX(int x)
     {
         this->x += x;
     }
-    void Retrocederx(int x)
+    void RetrocederX(int x)
     {
         this->x -= x;
+    }
+    void BajarY(int y)
+    {
+        this->y += y;
+    }
+    void SubirY(int y)
+    {
+        this->y -= y;
     }
     void Dibujar()
     {
@@ -45,9 +53,10 @@ public:
         while (getline(archivo, linea))
         {
             int y_linea = getcury(stdscr);
-            mvaddstr(y_linea + 1,
-                     this->x,
-                     linea.c_str());
+            mvaddstr(
+                y_linea + 1,
+                this->x,
+                linea.c_str());
         }
         archivo.clear();
         archivo.seekg(0);

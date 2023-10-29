@@ -1,16 +1,16 @@
-#pragma once
-#include <Actualizable.hpp>
-#include <curses.h>
+//#pragma once
+//#include <Actualizable.hpp>
+////#include <curses.h>
 
-class Controlador : public Actualizable
-{
-private:
-    /* data */
-public:
-    Controlador(/* args */) {}
-    ~Controlador() {}
-    void Actualizar()
-    {
+//class Controlador : public Actualizable
+//{
+//private:
+//    /* data */
+////public:
+ //   Controlador(/* args */) {}
+ //   ~Controlador() {}
+   // void Actualizar()
+   // {
         //     if(getch() == 'q'){
         //         ejecutar = false;
         //     }
@@ -30,5 +30,5 @@ public:
         //     if(getch() == 'l'){
         //          d2.Avanzarx(1);
         //     }
-    }
-};
+   // }
+//};
