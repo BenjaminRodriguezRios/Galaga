@@ -1,0 +1,31 @@
+@startuml
+
+class Naveh
+class Naveenemiga 
+Class Bicho
+class Sprite
+class Actualizable
+Class Dibujo
+Class Ventana
+Class escenario
+class Naveh
+{
+    +Moverse()
+    +Dispara()
+}
+class Naveenemiga
+{
+    +Dispara()
+}
+Sprite "1" *- "*" Dibujo
+Juego *-galaga
+Juego *-Ecsenario
+Ventana --o Ecsenario
+Personaje -|> Sprite
+Ventana o-- Dibujo
+Ventana o--Actualizable
+Ecsenario *-- Enemigo
+Ecsenario *-- Flor
+Naveh--|>Personaje
+
+@enduml
