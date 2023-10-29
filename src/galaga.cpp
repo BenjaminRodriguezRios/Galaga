@@ -12,7 +12,7 @@ int main(int argc, char const *argv[])
     Ventana v;
 
     Dibujo d1(25, 1, "naveh");
-
+    Dibujo d2(120, 3, "bicho");
 
     bool ejecucion = true;
     while (ejecucion)
@@ -43,6 +43,7 @@ int main(int argc, char const *argv[])
         clear();
         // v.Dibujar();
         d1.Dibujar();
+        d2.Dibujar();
         refresh();
         usleep(41000);
     }
